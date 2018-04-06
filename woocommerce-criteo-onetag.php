@@ -67,7 +67,7 @@ function getDefaultTag() {
       var site_type = /iPad/.test(navigator.userAgent) ? "t" : /Mobile|iP(hone|od)|Android|BlackBerry|IEMobile|Silk/.test(navigator.userAgent) ? "m" : "d";
       window.criteo_q = window.criteo_q || [];
       window.criteo_q.push(
-        { event: "setAccount", account: 00000 },
+        { event: "setAccount", account: <?php echo get_option('wc_criteo_ot_account_id'); ?> },
         { event: "setSiteType", type: site_type},
         { event: "setEmail", email: "<?php echo getUserEmail(); ?>"});
     </script>
